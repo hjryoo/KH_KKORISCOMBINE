@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* one-page */
+div.container.login, div.container.join, div.container.search {height: 100%;}
+
+/* 로그인 */
+div.contents.login,
+div.contents.search {width: 50%; max-width: 400px; height: 400px; top: calc(50% - 200px);}
+form#login > #loginBtn {width: 30%; margin-top: 20px; margin-left: 35%;}
+div.contents.login > div.text-button {text-align: center;}
+div.contents.login > div.text-button:nth-of-type(1) {margin-top: 30px;}
+div.contents.login > div.text-button > a {color: #000; font-size: 14px;}
+div.contents.login > div.text-button > a:hover {text-decoration: underline;}
+
+/* 회원가입 메인 */
+div.contents.join {width: 70%; height: 50%; top: calc(50% - 25%);}
+div.contents.join > div.join-icon {display: flex; justify-content: center; height: 100%; width: 100%; margin: 0 auto;}
+div.contents.join > div.join-icon > a {display: inline-block; font-size: 5em; width: 150px; height: 150px; border: 2px solid #000; border-radius: 75px; margin: 50px;}
+div.contents.join > div.join-icon > a > i {display: inline-block; width: 70px; margin-left: 40px; vertical-align: middle;}
+div.contents.join > div.join-icon > a:hover {border: 2px solid #fb929e; background: #fb929e; color: #fff; transition: all 0.3s ease-in-out;}
+div.contents.join > div.join-icon > a:hover i.fa-user {width: 108px; height: 27px; margin-left: 21px;}
+div.contents.join > div.join-icon > a:hover i.fa-hospital {width: 54px; height: 27px; margin-left: 48px;}
+div.contents.join > div.join-icon > a:hover i::before {font-size: 27px; font-weight: 600; position: absolute;}
+div.contents.join > div.join-icon > a:first-child:hover i::before {content:"일반회원";}
+div.contents.join > div.join-icon > a:last-child:hover i::before {content: "병원";}
+
+/* 회원가입 - 일반유저 */
+div.contents.join.user {width: 50%; max-width: 650px; margin: 20px auto;}
+form#joinUser {width: 80%; margin: 0 auto;}
+form#joinUser > div.input-box > input[name^=date] {width: 20%; text-align: right;}
+form#joinUser > div.input-box > input[name^=date]:not(:nth-of-type(1)){margin-left: 6%;}
+form#joinUser > div.input-box > input[name^=dateYear] {width: 35%;}
+
+/* 회원가입 - 병원 */
+form#joinHospital > div.location > input:nth-of-type(1) {width: 60%;}
+form#joinHospital > div.location > input {margin: 5px 0;}
+form#joinHospital > div.location > .postcodify_searchBtn {width: 39%; border: 1px solid #000; font-size: 13px; padding: 12px;}
+form#joinHospital > div.location > .postcodify_searchBtn:hover {border-color: #aedefc; background: #aedefc; color: #fff;}
